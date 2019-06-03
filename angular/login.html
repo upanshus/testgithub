@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Login</title>
+  </head>
+ <style>
+   .container-fluid{
+    height: 100vh;
+    background: url('img.jpg') fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+   }
+   .box{
+    position: absolute;
+    top:30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   }
+   #myform{
+     border: 1px solid;
+     border-radius: 5px;
+     padding: 40px;
+     background-color: whitesmoke;
+     }
+   #myform .form-control{
+      border-radius: 0px;!important;
+      font-size: 20px;
+     }
+ </style>
+  <body>
+   <section>
+     <div class="container-fluid">
+      <div class="row justify-content-center">
+       <div class="box">
+        <h3 class="text-center">Login Form</h3>
+        <form id="myform" method="post" onsubmit="return work();">
+          <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="email" class="form-control" name="email" id="email"  placeholder="Enter email">
+           
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" class="form-control" name="password" id="password" placeholder="Password">
+          </div>
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" >Check me out</label>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+       </div>
+      </div>   
+     </div>
+   </section>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
+<script>
+ function work(){
+  var email =localStorage.getItem("email");
+  var password =localStorage.getItem("password");
+ // var name =localStorage.getItem("name");
+  //alert(email +''+password+''+name);
+  var uemail= document.getElementById('email').value;
+  var upassword=document.getElementById('password').value;
+  //alert(uemail +''+upassword);
+   if((uemail==email) && (upassword==password))
+   {
+    alert("hello");
+
+    window.location.href = "file:///C:/Users/sonu/Desktop/angular/welcome.html";
+    return false;
+   }
+}
+</script>
